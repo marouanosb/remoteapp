@@ -1,5 +1,5 @@
 import socket
-from vidstream import StreamingServer
+#from vidstream import StreamingServer
 
 
 def openSocket(ip, port):
