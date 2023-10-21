@@ -5,11 +5,15 @@ def connectSocket(ip, port):
     return True
 
 
-if __name__== "main" :
+def main():
     prompt = input("Type ' connect [address] ' to start viewing.\n ")
-    ip = prompt.split("")[1]
+    ip = prompt.split(" ")[1]
     print(ip)
 
     connection = connectSocket(ip, 4242)
+
+if __name__ == "__main__" :
+    main()
+
 
     

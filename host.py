@@ -1,5 +1,5 @@
 import socket
-#from vidstream import StreamingServer
+from vidstream import StreamingServer
 
 
 def openSocket(ip, port):
@@ -8,13 +8,14 @@ def openSocket(ip, port):
     serversocket.listen(1)
     return serversocket
 
-
-if __name__ == "main" :
-
+def main():
     while input("Type ' host ' to start hosting.\n> ") != 'host':
         continue
 
     ip = socket.gethostbyname(socket.gethostname())
     print(f"Started hosting @{ip}")
     serversocket = openSocket(ip, 4242)
+
+if __name__ == "__main__" :
+    main()
 
