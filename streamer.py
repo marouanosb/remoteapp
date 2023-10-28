@@ -8,7 +8,13 @@ def startStreaming(ip, port):
     streamer = ScreenShareClient(ip, port)
     thread = threading.Thread(target=streamer.start_stream)
     thread.start()
+    #text = streamer.__client_socket.recv()
+    #print(str(text))
     return streamer
+
+def handleInputs():
+
+    return
 
 def main():
     while input("Type ' host ' to start hosting (F9 to stop).\n> ") != 'host' :
